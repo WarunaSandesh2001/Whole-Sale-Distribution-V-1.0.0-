@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cashierDashBoardContext" prefHeight="1075.0" prefWidth="1900.0" style="-fx-background-color: #87CEFA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CashierDashBoardFormController">
+    <children>
+        <AnchorPane layoutX="1.0" prefHeight="1075.0" prefWidth="1915.0" style="-fx-background-color: #87CEFA;">
+            <children>
+                <AnchorPane layoutX="1854.0" layoutY="7.0" onMouseClicked="#closeTheProgramOnAction1" prefHeight="38.0" prefWidth="38.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </AnchorPane>
+                <AnchorPane layoutX="1798.0" layoutY="6.0" prefHeight="38.0" prefWidth="38.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </AnchorPane>
+                <AnchorPane layoutX="1745.0" layoutY="5.0" onMouseClicked="#minimizeOnAction2" prefHeight="38.0" prefWidth="38.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </AnchorPane>
+                <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="1857.0" layoutY="7.0" onMouseClicked="#closeTheProgramOnAction">
+                    <image>
+                        <Image url="@../assets/x-button-icon-201.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="1801.0" layoutY="7.0">
+                    <image>
+                        <Image url="@../assets/minimize-icon-vector-216413754.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="1749.0" layoutY="1.0" onMouseClicked="#minimizeOnAction1">
+                    <image>
+                        <Image url="@../assets/minimize-1779402-151285945.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+            <Label layoutX="828.0" layoutY="18.0" text="Hi">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Separator layoutX="791.0" layoutY="55.0" prefHeight="8.0" prefWidth="290.0" />
+            <Button layoutX="13.0" layoutY="15.0" mnemonicParsing="false" onAction="#logoutOnAction" style="-fx-background-color: #8B008B;" text="Logout" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="83.0" layoutY="97.0" text="Customer Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="243.0" layoutY="113.0" prefWidth="200.0" />
+            <FontAwesomeIconView fill="#ab8220" glyphName="CIRCLE" layoutX="60.0" layoutY="115.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="146.0" layoutX="35.0" layoutY="134.0" stroke="BLACK" strokeType="INSIDE" width="1836.0" />
+            <Label fx:id="lblCashierName" layoutX="881.0" layoutY="25.0" prefHeight="33.0" prefWidth="201.0">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font></Label>
+            <JFXTextField fx:id="txtSearchCustomerID" labelFloat="true" layoutX="55.0" layoutY="155.0" onAction="#SearchCustomerOnAction" prefHeight="31.0" prefWidth="328.0" promptText="Search Customer (NIC)">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXTextField>
+            <Label layoutX="1629.0" layoutY="166.0" prefHeight="21.0" prefWidth="104.0" text="Customer ID :" textFill="#058d0c">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="lblCustomerID" layoutX="1731.0" layoutY="164.0" prefHeight="25.0" prefWidth="129.0" textFill="#058d0c">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Button fx:id="btnAdd" layoutX="1519.0" layoutY="240.0" mnemonicParsing="false" onAction="#customerAddOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #483D8B;" text="Add" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtCustomerAddress" layoutX="779.0" layoutY="159.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="327.0" promptText="Customer Address">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="txtCity" layoutX="60.0" layoutY="214.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="320.0" promptText="City">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="txtProvince" layoutX="430.0" layoutY="215.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="213.0" promptText="Province">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="txtPostalCode" layoutX="1141.0" layoutY="160.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="213.0" promptText="Postal Code" />
+            <TextField fx:id="txtCustomerTitle" layoutX="688.0" layoutY="216.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="607.0" promptText="Customer Title">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <FontAwesomeIconView fill="#ab8220" glyphName="CIRCLE" layoutX="61.0" layoutY="338.0" />
+            <Label layoutX="83.0" layoutY="319.0" text="Item Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="203.0" layoutY="333.0" prefHeight="3.0" prefWidth="240.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="146.0" layoutX="35.0" layoutY="354.0" stroke="BLACK" strokeType="INSIDE" width="1836.0" />
+            <Button fx:id="btnUpdate" layoutX="1700.0" layoutY="240.0" mnemonicParsing="false" onAction="#customerUpdateOnAction" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #483D8B;" text="Update " textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbItemDescription" layoutX="54.0" layoutY="368.0" prefHeight="31.0" prefWidth="527.0" promptText="Item Discription" style="-fx-border-color: #008000; -fx-border-width: 2;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <TableView fx:id="tblItemDetail" layoutX="54.0" layoutY="416.0" prefHeight="65.0" prefWidth="1501.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="colItemCode1" prefWidth="164.33328247070312" style="-fx-border-color: black;" text="Item Code" />
+                <TableColumn fx:id="colDescription1" prefWidth="581.6666259765625" style="-fx-border-color: black;" text="Description" />
+                  <TableColumn fx:id="colPackSize1" prefWidth="229.3333740234375" style="-fx-border-color: black;" text="Pack Size" />
+                  <TableColumn fx:id="colUnitPrice1" prefWidth="268.6666259765625" style="-fx-border-color: black;" text="Unit Price (Rs)" />
+                  <TableColumn fx:id="colQTYOnHand" prefWidth="249.3333740234375" style="-fx-border-color: black;" text="Quantity On Hand" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAddToCart" layoutX="1640.0" layoutY="453.0" mnemonicParsing="false" onAction="#addToCartOnAction" prefHeight="31.0" prefWidth="213.0" style="-fx-background-color: #32CD32; -fx-border-color: black;" text="Add to Cart" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="1591.0" layoutY="447.0">
+               <image>
+                  <Image url="@../assets/shopping-cart-icon-png-favpng-e5DiMUYLNYaTjdsibphFUCAxC54.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="210.0" layoutX="35.0" layoutY="567.0" stroke="BLACK" strokeType="INSIDE" width="1836.0" />
+            <Label layoutX="83.0" layoutY="534.0" text="List Of Item">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#ab8220" glyphName="CIRCLE" layoutX="62.0" layoutY="554.0" />
+            <Separator layoutX="198.0" layoutY="548.0" prefHeight="2.0" prefWidth="245.0" />
+            <TableView fx:id="tblListOfItem" layoutX="50.0" layoutY="591.0" prefHeight="178.0" prefWidth="1494.0" style="-fx-border-color: black; -fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="colItemCode2" prefWidth="164.33328247070312" style="-fx-border-color: black;" text="Item Code" />
+                  <TableColumn fx:id="colItemDescription" prefWidth="424.0" style="-fx-border-color: black;" text="Item Discription" />
+                  <TableColumn fx:id="colOrderQuantity" prefWidth="391.0" style="-fx-border-color: black;" text="Order Quantity(Packs)" />
+                  <TableColumn fx:id="colDiscount" prefWidth="248.0" style="-fx-border-color: black;" text="Discount (Rs)" />
+                  <TableColumn fx:id="colPrice" prefWidth="258.0" style="-fx-border-color: black;" text="Price (Rs)" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtQTYForSell" layoutX="730.0" layoutY="368.0" onAction="#goToBTNAddToCart" prefHeight="31.0" prefWidth="246.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Label layoutX="626.0" layoutY="373.0" prefHeight="25.0" prefWidth="97.0" text="Order QTY :">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Button layoutX="1580.0" layoutY="732.0" mnemonicParsing="false" onAction="#deleteItemQTYOnAction" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: #483D8B;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="1728.0" layoutY="732.0" mnemonicParsing="false" onAction="#UpdateItemQTYOnAction" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: #483D8B;" text="Update " textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtUpdateOrderQTY" layoutX="1646.0" layoutY="653.0" prefHeight="31.0" prefWidth="218.0" />
+            <Label layoutX="1592.0" layoutY="673.0" text="QTY :" />
+            <Label layoutX="41.0" layoutY="860.0" text="Gross Amount  :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="898.0" text="Total Discount  :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="937.0" text="Net Amount     :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="859.0" text="Rs." textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="900.0" text="Rs." textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblGrossAmount" layoutX="286.0" layoutY="860.0" prefHeight="35.0" prefWidth="145.0" text="0.00 /=" textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalDiscount" layoutX="285.0" layoutY="900.0" prefHeight="35.0" prefWidth="145.0" text="0.00 /=" textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalNetAmount" layoutX="286.0" layoutY="941.0" prefHeight="35.0" prefWidth="145.0" text="0.00 /=" textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="939.0" text="Rs." textFill="#bc0000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="789.0" text="Payment Info">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#ab8220" glyphName="CIRCLE" layoutX="62.0" layoutY="807.0" />
+            <Separator layoutX="211.0" layoutY="804.0" prefHeight="2.0" prefWidth="233.0" />
+            <Button layoutX="1518.0" layoutY="996.0" mnemonicParsing="false" onAction="#cancelOrderOnAction" prefHeight="47.0" prefWidth="145.0" style="-fx-background-radius: 10;" text="Cancel">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="1720.0" layoutY="996.0" mnemonicParsing="false" onAction="#saveOrderOnAction" prefHeight="47.0" prefWidth="145.0" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Save Order" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtNationalID" layoutX="1382.0" layoutY="159.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="213.0" promptText="National ID">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="txtCustomerName" layoutX="430.0" layoutY="158.0" onKeyReleased="#textFieldsForAdaANDUpdate_key_Released" prefHeight="31.0" prefWidth="327.0" promptText="Customer Name">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <JFXButton layoutX="1804.0" layoutY="91.0" onAction="#refreshOnAction" text="Refresh" textFill="#a02ba4" underline="true">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="1586.0" layoutY="649.0" text="Update" />
+            <FontAwesomeIconView fill="#8d8989" glyphName="SEARCH" layoutX="359.0" layoutY="182.0" mouseTransparent="true" size="20.0" />
+            <JFXButton layoutX="1659.0" layoutY="86.0" onAction="#goToSavedFormOnAction" text="Saved Orders" textFill="#1b00a1" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="1593.0" layoutY="574.0" text="Order ID :" textFill="#200a8f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderID" layoutX="1699.0" layoutY="575.0" prefHeight="30.0" prefWidth="139.0" textFill="#200a8f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            </children></AnchorPane>
+        <Label layoutX="14.0" layoutY="1040.0" text="House of P-Mart (Pvt) Ltd.  - Weligama" textFill="#545454">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Label>
+      <TextField fx:id="txtDate" editable="false" layoutX="933.0" layoutY="997.0" mouseTransparent="true" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #87CEFA;" />
+      <TextField fx:id="txtTime" editable="false" layoutX="895.0" layoutY="1019.0" mouseTransparent="true" prefHeight="54.0" prefWidth="201.0" style="-fx-background-color: #87CEFA;">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>
